@@ -19,10 +19,47 @@
 </nav>
 
 <script>
-  const button = document.querySelector(".menu-toggle");
-  const links = document.querySelector(".nav-links");
+  document.addEventListener("DOMContentLoaded", () => {
+    const button = document.querySelector(".menu-toggle");
+    const links = document.querySelector(".nav-links");
+    const nav = document.querySelector(".navbar");
 
-  button?.addEventListener("click", () => {
-    links?.classList.toggle("open");
+    if (!button || !links || !nav) return;
+
+    const closeMenu = () => {
+      links.classList.remove("open");
+      button.setAttribute("aria-expanded", "false");
+    };
+
+    const toggleMenu = () => {
+      const isOpen = links.classList.toggle("open");
+      button.setAttribute("aria-expanded", String(isOpen));
+    };
+
+    // 1) Abrir/cerrar con el botón
+    button.addEventListener("click", toggleMenu);
+
+    // 2) Cerrar al tocar un link del menú
+    links.querySelectorAll("a").forEach((a) => {
+      a.addEventListener("click", () => closeMenu());
+    });
+
+    // 3) Cerrar si tocás fuera del navbar (solo cuando está abierto)
+    document.addEventListener("click", (e) => {
+      const isOpen = links.classList.contains("open");
+      if (!isOpen) return;
+
+      const target = e.target;
+      if (!(target instanceof Node)) return;
+
+      const clickedInside = nav.contains(target);
+      if (!clickedInside) closeMenu();
+    });
+
+    // 4) Si pasa a desktop (resize), cerramos por las dudas
+    window.addEventListener("resize", () => {
+      if (window.innerWidth >= 768) closeMenu();
+    });
   });
 </script>
+
