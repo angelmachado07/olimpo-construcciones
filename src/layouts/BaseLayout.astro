@@ -1,5 +1,11 @@
 ---
-const { title = "Olimpo Construcciones", description = "Construcción y reformas en Piriápolis, Maldonado." } = Astro.props;
+import "../styles/global.css";
+import Navbar from "../components/Navbar.astro";
+
+const {
+  title = "Olimpo Construcciones",
+  description = "Construcción y reformas en Piriápolis, Maldonado.",
+} = Astro.props;
 ---
 
 <!doctype html>
@@ -9,12 +15,10 @@ const { title = "Olimpo Construcciones", description = "Construcción y reformas
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title}</title>
     <meta name="description" content={description} />
-
-    <!-- CSS global -->
-    <link rel="stylesheet" href="/src/styles/global.css" />
   </head>
 
   <body>
+    <Navbar />
     <slot />
   </body>
 </html>

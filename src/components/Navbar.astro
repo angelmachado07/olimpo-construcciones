@@ -1,0 +1,28 @@
+<nav class="navbar">
+  <div class="container navbar-inner">
+    <div class="logo">
+      OLIMPO
+    </div>
+
+    <button class="menu-toggle" aria-label="Abrir menú">
+      ☰
+    </button>
+
+    <ul class="nav-links">
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#servicios">Servicios</a></li>
+      <li><a href="#trabajos">Trabajos</a></li>
+      <li><a href="#equipo">Equipo</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </div>
+</nav>
+
+<script>
+  const button = document.querySelector(".menu-toggle");
+  const links = document.querySelector(".nav-links");
+
+  button?.addEventListener("click", () => {
+    links?.classList.toggle("open");
+  });
+</script>
