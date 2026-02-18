@@ -2,11 +2,133 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
-<BaseLayout title="Olimpo Construcciones" description="Construcción, reformas y ampliaciones en Piriápolis, Maldonado.">
-  <main class="container section">
-    <h1>Olimpo Construcciones</h1>
-    <p class="section-lead">
-      Sitio en construcción. Hoy armamos la estructura base.
-    </p>
+<BaseLayout
+  title="Olimpo Construcciones"
+  description="Construcción, reformas y ampliaciones en Piriápolis, Maldonado."
+>
+  <main>
+    <!-- INICIO / HERO -->
+    <section id="inicio" class="section">
+      <div class="container">
+        <h1>Olimpo Construcciones</h1>
+        <p class="section-lead">
+          Construcción, reformas y ampliaciones en Piriápolis y Maldonado.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#contacto">Contactar</a>
+          <a class="btn btn-ghost" href="#trabajos">Ver trabajos</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICIOS -->
+    <section id="servicios" class="section section-alt">
+      <div class="container">
+        <h2 class="section-title">Servicios</h2>
+        <p class="section-lead">Obras residenciales con terminaciones prolijas y seguimiento cercano.</p>
+
+        <div class="grid">
+          <article class="card">
+            <h3>Construcción de casas</h3>
+            <p>Obra nueva, desde base hasta terminaciones.</p>
+          </article>
+
+          <article class="card">
+            <h3>Reformas</h3>
+            <p>Cocina, baño, pintura, electricidad y más.</p>
+          </article>
+
+          <article class="card">
+            <h3>Ampliaciones</h3>
+            <p>Metros nuevos integrados a tu casa actual.</p>
+          </article>
+
+          <article class="card">
+            <h3>Cabañas</h3>
+            <p>Soluciones prácticas y funcionales.</p>
+          </article>
+
+          <article class="card">
+            <h3>Obras varias</h3>
+            <p>Muros, cercas, pisos, veredas y arreglos.</p>
+          </article>
+
+          <article class="card">
+            <h3>Mantenimiento</h3>
+            <p>Pequeñas reparaciones y ajustes.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRABAJOS -->
+    <section id="trabajos" class="section">
+      <div class="container">
+        <h2 class="section-title">Trabajos realizados</h2>
+        <p class="section-lead">Galería placeholder. Acá vamos a cargar fotos y timelapses del Facebook.</p>
+
+        <div class="grid">
+          <div class="card placeholder">Obra 1</div>
+          <div class="card placeholder">Obra 2</div>
+          <div class="card placeholder">Obra 3</div>
+          <div class="card placeholder">Obra 4</div>
+          <div class="card placeholder">Obra 5</div>
+          <div class="card placeholder">Obra 6</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EQUIPO -->
+    <section id="equipo" class="section section-alt">
+      <div class="container">
+        <h2 class="section-title">Equipo</h2>
+        <p class="section-lead">
+          Sección placeholder. Acá va una descripción breve del equipo y forma de trabajo.
+        </p>
+
+        <div class="card">
+          <h3>Trabajo serio y comunicación clara</h3>
+          <p>
+            Coordinación, cumplimiento y foco en terminaciones. (Texto a definir con el cliente)
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- UBICACIÓN -->
+    <section id="ubicacion" class="section">
+      <div class="container">
+        <h2 class="section-title">Ubicación</h2>
+        <p class="section-lead">
+          Placeholder para Google Maps. (Luego insertamos el iframe)
+        </p>
+
+        <div class="map-placeholder">Mapa</div>
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contacto" class="section section-alt">
+      <div class="container">
+        <h2 class="section-title">Contacto</h2>
+        <p class="section-lead">
+          WhatsApp como canal principal. Teléfono y email como alternativas.
+        </p>
+
+        <div class="contact-actions">
+          <a class="btn btn-primary" href="#">WhatsApp</a>
+          <a class="btn btn-ghost" href="#">Teléfono</a>
+          <a class="btn btn-ghost" href="#">Email</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container">
+        <p>© {new Date().getFullYear()} Olimpo Construcciones — Piriápolis, Maldonado</p>
+      </div>
+    </footer>
   </main>
 </BaseLayout>
