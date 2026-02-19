@@ -87,6 +87,7 @@ h1 {
     font-size: 2rem;
   }
 }
+
 /* ========== NAVBAR ========== */
 .navbar {
   position: sticky;
@@ -101,12 +102,15 @@ h1 {
   align-items: center;
   justify-content: space-between;
   padding: var(--space-3) 0;
-  position: relative; /* clave para el menú absolute */
+  position: relative;
+  /* clave para el menú absolute */
 }
 
 .logo {
   font-weight: 700;
   letter-spacing: 1px;
+  text-decoration: none;
+  color: var(--text);
 }
 
 .menu-toggle {
@@ -130,7 +134,8 @@ h1 {
   margin: 0;
   padding: var(--space-4);
 
-  display: none !important; /* fuerza oculto */
+  display: none !important;
+  /* fuerza oculto */
   flex-direction: column;
   gap: var(--space-3);
 
@@ -139,7 +144,8 @@ h1 {
 }
 
 .nav-links.open {
-  display: flex !important; /* fuerza visible */
+  display: flex !important;
+  /* fuerza visible */
 }
 
 .nav-links a {
@@ -256,3 +262,22 @@ section {
   scroll-margin-top: 70px;
 }
 
+/* ========== HERO ========== */
+
+.hero {
+  display: flex;
+  align-items: center;
+  min-height: 70vh;
+}
+
+.hero .container {
+  max-width: 750px;
+}
+
+.hero h1 {
+  font-weight: 700;
+}
+
+.hero .section-lead {
+  font-size: 1.1rem;
+}
