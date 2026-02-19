@@ -281,3 +281,19 @@ section {
 .hero .section-lead {
   font-size: 1.1rem;
 }
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text);
+  padding: 8px 10px;
+  border-radius: 10px;
+}
+
+.nav-links a:hover {
+  background: var(--bg-soft);
+}
+
+.nav-links a.active {
+  background: var(--bg-soft);
+  border: 1px solid var(--border);
+}
