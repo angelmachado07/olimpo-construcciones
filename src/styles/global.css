@@ -249,3 +249,10 @@ h1 {
     grid-template-columns: repeat(3, 1fr);
   }
 }
+
+/* ========== FIX SCROLL OFFSET (navbar sticky) ========== */
+
+section {
+  scroll-margin-top: 70px;
+}
+
