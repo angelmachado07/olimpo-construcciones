@@ -1,12 +1,8 @@
 <nav class="navbar">
   <div class="container navbar-inner">
-    <div class="logo">
-      OLIMPO
-    </div>
+    <a href="#inicio" class="logo"> OLIMPO </a>
 
-    <button class="menu-toggle" aria-label="Abrir menú">
-      ☰
-    </button>
+    <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false" type="button">☰</button>
 
     <ul class="nav-links">
       <li><a href="#inicio">Inicio</a></li>
@@ -19,10 +15,94 @@
 </nav>
 
 <script>
-  const button = document.querySelector(".menu-toggle");
-  const links = document.querySelector(".nav-links");
+  document.addEventListener("DOMContentLoaded", () => {
+    const button = document.querySelector(".menu-toggle");
+    const links = document.querySelector(".nav-links");
+    const nav = document.querySelector(".navbar");
 
-  button?.addEventListener("click", () => {
-    links?.classList.toggle("open");
+    if (!(button instanceof HTMLButtonElement)) return;
+    if (!(links instanceof HTMLElement)) return;
+    if (!(nav instanceof HTMLElement)) return;
+
+    const closeMenu = () => {
+      links.classList.remove("open");
+      button.setAttribute("aria-expanded", "false");
+    };
+
+    const toggleMenu = () => {
+      const isOpen = links.classList.toggle("open");
+      button.setAttribute("aria-expanded", String(isOpen));
+    };
+
+    // 1) Abrir/cerrar con el botón
+    button.addEventListener("click", toggleMenu);
+
+    // 2) Cerrar al tocar un link del menú
+    links.querySelectorAll("a").forEach((a) => {
+      a.addEventListener("click", closeMenu);
+    });
+
+    // 3) Cerrar si tocás fuera del navbar (solo cuando está abierto)
+    document.addEventListener("click", (e) => {
+      if (!links.classList.contains("open")) return;
+
+      const target = e.target;
+      if (!(target instanceof Node)) return;
+
+      if (!nav.contains(target)) closeMenu();
+    });
+
+    // 4) Si pasa a desktop (resize), cerramos por las dudas
+    window.addEventListener("resize", () => {
+      if (window.innerWidth >= 768) closeMenu();
+    });
+
+    // 5) Link activo según sección visible
+    const sectionIds = [
+      "inicio",
+      "servicios",
+      "trabajos",
+      "equipo",
+      "ubicacion",
+      "contacto",
+    ];
+
+    const sections = sectionIds
+      .map((id) => document.getElementById(id))
+      .filter((el) => el instanceof HTMLElement);
+
+    const navAnchors = Array.from(links.querySelectorAll("a"));
+
+    const setActive = (id: string) => {
+      navAnchors.forEach((a) => a.classList.remove("active"));
+      const current = navAnchors.find(
+        (a) => a.getAttribute("href") === `#${id}`,
+      );
+      if (current) current.classList.add("active");
+    };
+
+    const observer = new IntersectionObserver(
+  (entries) => {
+    // Nos quedamos con la última sección que "entra" en la zona activa
+    entries.forEach((entry) => {
+      if (entry.isIntersecting && entry.target instanceof HTMLElement) {
+        setActive(entry.target.id);
+      }
+    });
+  },
+  {
+    root: null,
+    // Zona activa: un poco debajo del navbar.
+    // Ajustá -70px si tu navbar cambia de alto.
+    rootMargin: "-70px 0px -70% 0px",
+    threshold: 0,
+  }
+);
+
+
+    sections.forEach((s) => observer.observe(s));
+
+    // Set inicial
+    setActive("inicio");
   });
 </script>

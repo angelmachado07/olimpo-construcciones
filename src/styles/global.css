@@ -56,6 +56,16 @@ video {
   padding: var(--space-6) 0;
 }
 
+h1 {
+  font-size: clamp(1.9rem, 5vw, 3rem);
+  line-height: 1.15;
+  margin: 0 0 var(--space-3);
+}
+
+.section-title {
+  font-size: clamp(1.4rem, 3.5vw, 2rem);
+}
+
 .section-title {
   margin: 0 0 var(--space-3);
   font-size: 1.6rem;
@@ -77,6 +87,7 @@ video {
     font-size: 2rem;
   }
 }
+
 /* ========== NAVBAR ========== */
 .navbar {
   position: sticky;
@@ -91,12 +102,15 @@ video {
   align-items: center;
   justify-content: space-between;
   padding: var(--space-3) 0;
-  position: relative; /* clave para el menú absolute */
+  position: relative;
+  /* clave para el menú absolute */
 }
 
 .logo {
   font-weight: 700;
   letter-spacing: 1px;
+  text-decoration: none;
+  color: var(--text);
 }
 
 .menu-toggle {
@@ -120,7 +134,8 @@ video {
   margin: 0;
   padding: var(--space-4);
 
-  display: none !important; /* fuerza oculto */
+  display: none !important;
+  /* fuerza oculto */
   flex-direction: column;
   gap: var(--space-3);
 
@@ -129,7 +144,8 @@ video {
 }
 
 .nav-links.open {
-  display: flex !important; /* fuerza visible */
+  display: flex !important;
+  /* fuerza visible */
 }
 
 .nav-links a {
@@ -170,7 +186,7 @@ video {
   background: #fff;
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  padding: var(--space-4);
+  padding: 18px;
 }
 
 .placeholder {
@@ -238,4 +254,46 @@ video {
   .grid {
     grid-template-columns: repeat(3, 1fr);
   }
+}
+
+/* ========== FIX SCROLL OFFSET (navbar sticky) ========== */
+
+section {
+  scroll-margin-top: 70px;
+}
+
+/* ========== HERO ========== */
+
+.hero {
+  display: flex;
+  align-items: center;
+  min-height: 70vh;
+}
+
+.hero .container {
+  max-width: 750px;
+}
+
+.hero h1 {
+  font-weight: 700;
+}
+
+.hero .section-lead {
+  font-size: 1.1rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text);
+  padding: 8px 10px;
+  border-radius: 10px;
+}
+
+.nav-links a:hover {
+  background: var(--bg-soft);
+}
+
+.nav-links a.active {
+  background: var(--bg-soft);
+  border: 1px solid var(--border);
 }
