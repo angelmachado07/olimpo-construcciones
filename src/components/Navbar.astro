@@ -1,8 +1,15 @@
 <nav class="navbar">
   <div class="container navbar-inner">
-    <a href="#inicio" class="logo"> OLIMPO </a>
+    <a href="#inicio" class="logo">OLIMPO</a>
 
-    <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false" type="button">☰</button>
+    <button
+      class="menu-toggle"
+      aria-label="Abrir menú"
+      aria-expanded="false"
+      type="button"
+    >
+      ☰
+    </button>
 
     <ul class="nav-links">
       <li><a href="#inicio">Inicio</a></li>
@@ -15,6 +22,7 @@
 </nav>
 
 <script>
+  // @ts-nocheck
   document.addEventListener("DOMContentLoaded", () => {
     const button = document.querySelector(".menu-toggle");
     const links = document.querySelector(".nav-links");
@@ -58,14 +66,7 @@
     });
 
     // 5) Link activo según sección visible
-    const sectionIds = [
-      "inicio",
-      "servicios",
-      "trabajos",
-      "equipo",
-      "ubicacion",
-      "contacto",
-    ];
+    const sectionIds = ["inicio", "servicios", "trabajos", "equipo", "ubicacion", "contacto"];
 
     const sections = sectionIds
       .map((id) => document.getElementById(id))
@@ -73,32 +74,27 @@
 
     const navAnchors = Array.from(links.querySelectorAll("a"));
 
-    const setActive = (id: string) => {
-      navAnchors.forEach((a) => a.classList.remove("active"));
-      const current = navAnchors.find(
-        (a) => a.getAttribute("href") === `#${id}`,
-      );
-      if (current) current.classList.add("active");
-    };
+    /** @type {(sectionId: string) => void} */
+const setActive = (sectionId) => {
+  navAnchors.forEach((a) => a.classList.remove("active"));
+  const current = navAnchors.find((a) => a.getAttribute("href") === `#${sectionId}`);
+  if (current) current.classList.add("active");
+};
 
     const observer = new IntersectionObserver(
-  (entries) => {
-    // Nos quedamos con la última sección que "entra" en la zona activa
-    entries.forEach((entry) => {
-      if (entry.isIntersecting && entry.target instanceof HTMLElement) {
-        setActive(entry.target.id);
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && entry.target instanceof HTMLElement) {
+            setActive(entry.target.id);
+          }
+        });
+      },
+      {
+        root: null,
+        rootMargin: "-70px 0px -70% 0px",
+        threshold: 0,
       }
-    });
-  },
-  {
-    root: null,
-    // Zona activa: un poco debajo del navbar.
-    // Ajustá -70px si tu navbar cambia de alto.
-    rootMargin: "-70px 0px -70% 0px",
-    threshold: 0,
-  }
-);
-
+    );
 
     sections.forEach((s) => observer.observe(s));
 
