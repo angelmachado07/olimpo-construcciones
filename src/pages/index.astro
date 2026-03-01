@@ -7,12 +7,18 @@ import BaseLayout from "../layouts/BaseLayout.astro";
   description="Construcción, reformas y ampliaciones en Piriápolis, Maldonado."
 >
   <main>
-    <!-- INICIO / HERO -->
-    <section id="inicio" class="section">
+    <!-- INICIO / HERO WOW -->
+    <section id="inicio" class="hero">
       <div class="container">
+        <div class="hero-badge">
+          <span class="dot"></span>
+          Piriápolis · Maldonado · Obras residenciales
+        </div>
+
         <h1>Olimpo Construcciones</h1>
         <p class="section-lead">
-          Construcción, reformas y ampliaciones en Piriápolis y Maldonado.
+          Construcción, reformas y ampliaciones con terminaciones prolijas,
+          comunicación clara y seguimiento cercano.
         </p>
 
         <div class="hero-actions">
@@ -27,7 +33,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
       <div class="container">
         <h2 class="section-title">Servicios</h2>
         <p class="section-lead">
-          Obras residenciales con terminaciones prolijas y seguimiento cercano.
+          Soluciones prácticas y funcionales, desde obra nueva hasta mantenimiento.
         </p>
 
         <div class="grid">
@@ -69,17 +75,28 @@ import BaseLayout from "../layouts/BaseLayout.astro";
       <div class="container">
         <h2 class="section-title">Trabajos realizados</h2>
         <p class="section-lead">
-          Galería placeholder. Acá vamos a cargar fotos y timelapses del
-          Facebook.
+          Algunas obras y procesos. Más trabajos disponibles en redes y por consulta.
         </p>
 
-        <div class="grid">
-          <div class="card placeholder">Obra 1</div>
-          <div class="card placeholder">Obra 2</div>
-          <div class="card placeholder">Obra 3</div>
-          <div class="card placeholder">Obra 4</div>
-          <div class="card placeholder">Obra 5</div>
-          <div class="card placeholder">Obra 6</div>
+        <div class="works-grid">
+          <figure class="work-card">
+            <img src="/works/obra-1.jpg" alt="Trabajo realizado 1" loading="lazy" />
+          </figure>
+          <figure class="work-card">
+            <img src="/works/obra-2.jpg" alt="Trabajo realizado 2" loading="lazy" />
+          </figure>
+          <figure class="work-card">
+            <img src="/works/obra-3.jpg" alt="Trabajo realizado 3" loading="lazy" />
+          </figure>
+          <figure class="work-card">
+            <img src="/works/obra-4.jpg" alt="Trabajo realizado 4" loading="lazy" />
+          </figure>
+          <figure class="work-card">
+            <img src="/works/obra-5.jpg" alt="Trabajo realizado 5" loading="lazy" />
+          </figure>
+          <figure class="work-card">
+            <img src="/works/obra-6.jpg" alt="Trabajo realizado 6" loading="lazy" />
+          </figure>
         </div>
       </div>
     </section>
@@ -89,15 +106,14 @@ import BaseLayout from "../layouts/BaseLayout.astro";
       <div class="container">
         <h2 class="section-title">Equipo</h2>
         <p class="section-lead">
-          Sección placeholder. Acá va una descripción breve del equipo y forma
-          de trabajo.
+          Trabajo serio, comunicación clara y foco en terminaciones.
         </p>
 
         <div class="card">
-          <h3>Trabajo serio y comunicación clara</h3>
+          <h3>Coordinación y cumplimiento</h3>
           <p>
-            Coordinación, cumplimiento y foco en terminaciones. (Texto a definir
-            con el cliente)
+            Organizamos el trabajo por etapas, cuidando tiempos, materiales y detalles
+            para llegar a un resultado prolijo.
           </p>
         </div>
       </div>
@@ -108,10 +124,10 @@ import BaseLayout from "../layouts/BaseLayout.astro";
       <div class="container">
         <h2 class="section-title">Ubicación</h2>
         <p class="section-lead">
-          Placeholder para Google Maps. (Luego insertamos el iframe)
+          Por ahora trabajamos en Piriápolis y Maldonado. (Luego definimos ubicación/oficina)
         </p>
 
-        <div class="map-placeholder">Mapa</div>
+        <div class="map-placeholder">Zona Piriápolis / Maldonado</div>
       </div>
     </section>
 
@@ -124,7 +140,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
         </p>
 
         <div class="contact-actions">
-          <!--CAMBIAR EL NUMERO DE WHATSAPP POR EL DEL CLIENTE-->
+          <!-- CAMBIAR EL NUMERO DE WHATSAPP POR EL DEL CLIENTE ANTES DE PRODUCCIÓN -->
           <a
             class="btn btn-primary"
             href="https://wa.me/59899523024?text=Hola,%20quiero%20consultar%20por%20una%20obra."
