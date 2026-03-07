@@ -1,9 +1,9 @@
   <nav class="navbar">
   <div class="container navbar-inner">
     <a href="#inicio" class="logo" aria-label="Ir al inicio">
-  <img src="/brand/Logo.png" alt="Olimpo Construcciones" class="logo-img" />
-  <span class="logo-text"></span>
-</a>
+      <img src="/brand/Logo.png" alt="Olimpo Construcciones" class="logo-img" />
+      <span class="logo-text">Olimpo Construcciones</span>
+    </a>
 
     <button
       class="menu-toggle"
@@ -11,15 +11,24 @@
       aria-expanded="false"
       type="button"
     >
-      ☰
+      <svg class="hamburger" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <path class="line line-1" d="M4 6h16"/>
+        <path class="line line-2" d="M4 12h16"/>
+        <path class="line line-3" d="M4 18h16"/>
+      </svg>
     </button>
 
     <ul class="nav-links">
       <li><a href="#inicio">Inicio</a></li>
       <li><a href="#servicios">Servicios</a></li>
       <li><a href="#trabajos">Trabajos</a></li>
-      <li><a href="#equipo">Equipo</a></li>
+      <li><a href="#equipo">Cómo trabajamos</a></li>
       <li><a href="#contacto">Contacto</a></li>
+      <li class="nav-cta-item">
+        <a href="https://wa.me/59895371101?text=Hola,%20quiero%20consultar%20por%20una%20obra." class="btn btn-primary nav-wa-btn" target="_blank" rel="noopener">
+          WhatsApp
+        </a>
+      </li>
     </ul>
   </div>
 </nav>
@@ -61,6 +70,18 @@
     window.addEventListener("resize", () => {
       if (window.innerWidth >= 768) closeMenu();
     });
+
+    // Shrink navbar on scroll
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        nav.classList.add("is-scrolled");
+      } else {
+        nav.classList.remove("is-scrolled");
+      }
+    };
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    // Run once on load
+    handleScroll();
 
     // Active link por sección visible
     const sectionIds = ["inicio", "servicios", "trabajos", "equipo", "ubicacion", "contacto"];

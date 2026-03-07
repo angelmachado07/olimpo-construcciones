@@ -10,30 +10,19 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     <!-- INICIO / HERO -->
     <section id="inicio" class="hero">
       <div class="container">
-        <div class="hero-badge">
-          <span class="dot"></span>
-          Piriápolis · Maldonado · Obras residenciales
-        </div>
+        <p class="hero-kicker animate-in delay-1">Olimpo Construcciones</p>
 
-        <p class="hero-kicker">Construcción y reformas con trato directo</p>
+        <h1 class="animate-in delay-1">Espacios bien construidos, pensados para durar.</h1>
 
-        <h1>Espacios bien construidos, pensados para durar.</h1>
-
-        <p class="section-lead">
+        <p class="section-lead animate-in delay-2">
           En Olimpo Construcciones realizamos obras residenciales, reformas y
           ampliaciones con foco en prolijidad, orden y seguimiento cercano en
           cada etapa del trabajo.
         </p>
 
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="#contacto">Solicitar presupuesto</a>
-          <a class="btn btn-ghost" href="#trabajos">Ver trabajos</a>
-        </div>
-
-        <div class="hero-points">
-          <span>Obras residenciales</span>
-          <span>Reformas y ampliaciones</span>
-          <span>Atención directa por WhatsApp</span>
+        <div class="hero-actions animate-in delay-3">
+          <a class="btn btn-primary" href="https://wa.me/59895371101?text=Hola,%20quiero%20consultar%20por%20una%20obra." target="_blank" rel="noopener">Solicitar presupuesto</a>
+          <a class="btn btn-ghost" href="#trabajos">Ver trabajos <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-left:8px"><path d="m6 9 6 6 6-6"/></svg></a>
         </div>
       </div>
     </section>
@@ -41,17 +30,20 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     <!-- BLOQUE DE CONFIANZA -->
     <section class="trust-strip">
       <div class="container trust-grid">
-        <article>
+        <div class="trust-brand-wrapper scroll-fade-in delay-1">
+          <img src="/brand/Logo.png" alt="Olimpo Construcciones" class="trust-logo" loading="lazy" />
+        </div>
+        <article class="scroll-fade-in">
           <strong>Trato directo</strong>
           <p>Comunicación clara desde el primer contacto hasta la entrega.</p>
         </article>
 
-        <article>
+        <article class="scroll-fade-in delay-1">
           <strong>Orden en cada etapa</strong>
           <p>Planificación, seguimiento y cuidado de detalles durante la obra.</p>
         </article>
 
-        <article>
+        <article class="scroll-fade-in delay-2">
           <strong>Terminaciones prolijas</strong>
           <p>Buscamos resultados sólidos, funcionales y bien resueltos.</p>
         </article>
@@ -70,39 +62,45 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
         <div class="grid services-grid">
           <article class="card service-card">
-            <span class="service-icon">01</span>
+            <span class="service-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M3 9.5L12 3l9 6.5M5 11v9a2 2 0 002 2h10a2 2 0 002-2v-9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
             <h3>Construcción de casas</h3>
             <p>Obra nueva, desde la base hasta las terminaciones finales.</p>
+            <a href="https://wa.me/59895371101?text=Hola,%20quiero%20consultar%20por%20Construcción%20de%20casas" class="service-cta" target="_blank" rel="noopener">Consultar por este servicio →</a>
           </article>
 
           <article class="card service-card">
-            <span class="service-icon">02</span>
+            <span class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 12-8.5 8.5c-.83.83-2.17.83-3 0 0 0 0 0 0 0a2.12 2.12 0 0 1 0-3L12 9"/><path d="M17.64 15 22 10.64"/><path d="m20.91 11.7-1.25-1.25c-.6-.6-.93-1.4-.93-2.25v-.86L16.01 4.6a5.56 5.56 0 0 0-3.94-1.64H9l.92.82A6.18 6.18 0 0 1 12 8.4v1.56l2 2h2.47l2.26 1.91"/></svg></span>
             <h3>Reformas</h3>
             <p>Mejoras en cocina, baño, pintura, electricidad y espacios interiores.</p>
+            <a href="https://wa.me/59895371101?text=Hola,%20quiero%20consultar%20por%20Reformas" class="service-cta" target="_blank" rel="noopener">Consultar por este servicio →</a>
           </article>
 
           <article class="card service-card">
-            <span class="service-icon">03</span>
+            <span class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 3L15 3M21 3L21 9M21 3L14 10M3 21L9 21M3 21L3 15M3 21L10 14M15 21L21 21M21 21L21 15M21 21L14 14M9 3L3 3M3 3L3 9M3 3L10 10"/></svg></span>
             <h3>Ampliaciones</h3>
             <p>Nuevos metros integrados de forma funcional a la vivienda existente.</p>
+            <a href="https://wa.me/59895371101?text=Hola,%20quiero%20consultar%20por%20Ampliaciones" class="service-cta" target="_blank" rel="noopener">Consultar por este servicio →</a>
           </article>
 
           <article class="card service-card">
-            <span class="service-icon">04</span>
+            <span class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 10 9-7 9 7-1.5 1.5-7.5-5.8-7.5 5.8Z"/><path d="M5 12v8h14v-8"/><path d="M10 20v-5h4v5"/></svg></span>
             <h3>Cabañas</h3>
             <p>Soluciones residenciales compactas, prácticas y bien ejecutadas.</p>
+            <a href="https://wa.me/59895371101?text=Hola,%20quiero%20consultar%20por%20Cabañas" class="service-cta" target="_blank" rel="noopener">Consultar por este servicio →</a>
           </article>
 
           <article class="card service-card">
-            <span class="service-icon">05</span>
+            <span class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg></span>
             <h3>Obras varias</h3>
             <p>Muros, cercas, pisos, veredas y mejoras exteriores.</p>
+            <a href="https://wa.me/59895371101?text=Hola,%20quiero%20consultar%20por%20Obras%20varias" class="service-cta" target="_blank" rel="noopener">Consultar por este servicio →</a>
           </article>
 
           <article class="card service-card">
-            <span class="service-icon">06</span>
+            <span class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>
             <h3>Mantenimiento</h3>
             <p>Arreglos, reparaciones y ajustes para mantener la vivienda en buen estado.</p>
+            <a href="https://wa.me/59895371101?text=Hola,%20quiero%20consultar%20por%20Mantenimiento" class="service-cta" target="_blank" rel="noopener">Consultar por este servicio →</a>
           </article>
         </div>
       </div>
@@ -119,34 +117,69 @@ import BaseLayout from "../layouts/BaseLayout.astro";
         </p>
 
         <div class="works-grid">
-          <figure class="work-card">
-            <span class="work-tag">Reforma</span>
-            <img src="/works/obra-1.jpg" alt="Reforma realizada por Olimpo Construcciones" loading="lazy" />
+          <figure class="work-card span-2-row scroll-fade-in">
+            <span class="work-tag">Steel Framing</span>
+            <img src="/works/obra-2.jpg" alt="Construcción de vivienda en Piriápolis realizada por Olimpo Construcciones" loading="lazy" />
           </figure>
 
-          <figure class="work-card">
+          <figure class="work-card span-2-col scroll-fade-in delay-1">
+            <span class="work-tag">Cabañas</span>
+            <img src="/works/obra-1.jpg" alt="Reforma integral de casa en Maldonado por Olimpo Construcciones" loading="lazy" />
+          </figure>
+
+          <figure class="work-card scroll-fade-in delay-2">
             <span class="work-tag">Obra nueva</span>
-            <img src="/works/obra-2.jpg" alt="Obra nueva realizada por Olimpo Construcciones" loading="lazy" />
+            <img src="/works/obra-3.jpg" alt="Ampliación residencial en Piriápolis por Olimpo Construcciones" loading="lazy" />
+          </figure>
+          
+          <figure class="work-card scroll-fade-in">
+            <span class="work-tag">Cimientos</span>
+            <img src="/works/obra-4.jpg" alt="Terminaciones de obra interior por Olimpo Construcciones" loading="lazy" />
           </figure>
 
-          <figure class="work-card">
-            <span class="work-tag">Ampliación</span>
-            <img src="/works/obra-3.jpg" alt="Ampliación realizada por Olimpo Construcciones" loading="lazy" />
-          </figure>
-
-          <figure class="work-card">
-            <span class="work-tag">Terminaciones</span>
-            <img src="/works/obra-4.jpg" alt="Terminaciones de obra realizadas por Olimpo Construcciones" loading="lazy" />
-          </figure>
-
-          <figure class="work-card">
-            <span class="work-tag">Exterior</span>
-            <img src="/works/obra-5.jpg" alt="Trabajo exterior realizado por Olimpo Construcciones" loading="lazy" />
-          </figure>
-
-          <figure class="work-card">
+          <figure class="work-card span-2-col scroll-fade-in delay-1">
             <span class="work-tag">Proceso</span>
-            <img src="/works/obra-6.jpg" alt="Proceso de obra realizado por Olimpo Construcciones" loading="lazy" />
+            <img src="/works/obra-5.jpg" alt="Trabajo de exteriores y fachada por Olimpo Construcciones" loading="lazy" />
+          </figure>
+
+          <figure class="work-card span-2-row scroll-fade-in delay-2">
+            <span class="work-tag">Plateas</span>
+            <img src="/works/obra-6.jpg" alt="Proceso de construcción de vivienda por Olimpo Construcciones" loading="lazy" />
+          </figure>
+
+          <figure class="work-card scroll-fade-in">
+          <span class="work-tag">Proceso</span>
+            <img src="/works/obra-07.jpg" alt="Detalle arquitectónico de obra en Piriápolis por Olimpo Construcciones" loading="lazy" />
+          </figure>
+
+          <figure class="work-card scroll-fade-in delay-1">
+          <span class="work-tag">Isopanel</span>
+            <img src="/works/obra-8.jpg" alt="Avance de obra residencial por Olimpo Construcciones" loading="lazy" />
+          </figure>
+
+          <figure class="work-card span-2-col scroll-fade-in delay-2">
+            <span class="work-tag">Fin de obra</span>
+            <img src="/works/obra-9.jpg" alt="Estructura de hormigón realizada por Olimpo Construcciones" loading="lazy" />
+          </figure>
+
+          <figure class="work-card scroll-fade-in">
+          <span class="work-tag">Cocinas</span>
+            <img src="/works/obra-10.jpg" alt="Proceso de levantamiento de muros por Olimpo Construcciones" loading="lazy" />
+          </figure>
+
+          <figure class="work-card span-2-row scroll-fade-in delay-1">
+            <span class="work-tag">Baños</span>
+            <img src="/works/obra-11.jpg" alt="Construcción de cabaña de madera por Olimpo Construcciones" loading="lazy" />
+          </figure>
+
+          <figure class="work-card scroll-fade-in delay-2">
+            <span class="work-tag">Piscinas</span>
+            <img src="/works/obra-12.jpg" alt="Etapa de techado en obra nueva por Olimpo Construcciones" loading="lazy" />
+          </figure>
+
+          <figure class="work-card span-2-col scroll-fade-in delay-3">
+            <span class="work-tag">Piscinas</span>
+            <img src="/works/obra-13.jpg" alt="Finalización de vivienda entregada por Olimpo Construcciones" loading="lazy" />
           </figure>
         </div>
       </div>
@@ -193,7 +226,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
         <div class="location-box">
           <strong>Zona principal de atención</strong>
-          <p>Piriápolis · Playa Grande · San Francisco · Maldonado</p>
+          <p>Piriápolis · Maldonado · Zona Este del país</p>
         </div>
       </div>
     </section>
@@ -217,7 +250,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
           <div class="contact-actions">
             <a
               class="btn btn-primary"
-              href="https://wa.me/59899523024?text=Hola,%20quiero%20consultar%20por%20una%20obra."
+              href="https://wa.me/59895371101?text=Hola,%20quiero%20consultar%20por%20una%20obra."
               target="_blank"
               rel="noopener"
             >
@@ -235,9 +268,89 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     <!-- FOOTER -->
     <footer class="footer">
       <div class="container footer-inner">
-        <p>© {new Date().getFullYear()} Olimpo Construcciones</p>
-        <p>Piriápolis, Maldonado · Obras residenciales y reformas</p>
+        <div>
+          <img src="/brand/Logo.png" alt="Olimpo Construcciones" class="footer-logo" loading="lazy" />
+          <p>© {new Date().getFullYear()} Olimpo Construcciones</p>
+          <p>Piriápolis, Maldonado · Obras residenciales y reformas</p>
+        </div>
       </div>
     </footer>
   </main>
+
+  <!-- Floating WA Button -->
+  <a href="https://wa.me/59895371101" class="floating-wa" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.888-.788-1.489-1.761-1.663-2.06-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+  </a>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox">
+    <div class="lightbox-overlay"></div>
+    <div class="lightbox-content">
+      <button class="lightbox-close" aria-label="Cerrar">&times;</button>
+      <img id="lightbox-img" src="" alt="Olimpo Construcciones" />
+    </div>
+  </div>
+
+  <script>
+    // @ts-nocheck
+    document.addEventListener("DOMContentLoaded", () => {
+      // Intersection Observer for scroll animations
+      const scrollObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            scrollObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1 });
+      
+      // Elements to animate on scroll
+      document.querySelectorAll('.trust-grid article, .service-card, .process-card, .section-title, .work-card, .contact-box').forEach(el => {
+        el.classList.add('scroll-fade-in');
+        scrollObserver.observe(el);
+      });
+
+      // Lightbox logic
+      const lightbox = document.getElementById('lightbox');
+      const lightboxImg = document.getElementById('lightbox-img');
+      const closeBtn = document.querySelector('.lightbox-close');
+
+      const openLightbox = (src) => {
+        lightboxImg.src = src;
+        lightbox.classList.add('open');
+      };
+
+      const closeLightbox = () => {
+        lightbox.classList.remove('open');
+        setTimeout(() => { if (!lightbox.classList.contains('open')) lightboxImg.src = ''; }, 300);
+      };
+
+      // Work gallery images
+      document.querySelectorAll('.work-card img').forEach(img => {
+        img.closest('.work-card').addEventListener('click', () => openLightbox(img.src));
+      });
+
+      // Nav Logo Click Behavior
+      const logoLink = document.querySelector('.logo');
+      if (logoLink) {
+        logoLink.addEventListener('click', (e) => {
+          // If at the top of the page (in 'inicio' section), show expanded logo
+          if (window.scrollY < 200) {
+            e.preventDefault();
+            openLightbox(logoLink.querySelector('img').src);
+          }
+          // If scrolled down, let it act naturally as a normal anchor link to "#inicio"
+        });
+      }
+
+      // Close lightbox events
+      closeBtn?.addEventListener('click', closeLightbox);
+      lightbox?.querySelector('.lightbox-overlay')?.addEventListener('click', closeLightbox);
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closeLightbox();
+      });
+    });
+  </script>
 </BaseLayout>
