@@ -7,7 +7,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
   description="Construcción, reformas y ampliaciones en Piriápolis, Maldonado."
 >
   <main>
-    <!-- INICIO / HERO WOW -->
+    <!-- INICIO / HERO -->
     <section id="inicio" class="hero">
       <div class="container">
         <div class="hero-badge">
@@ -15,56 +15,94 @@ import BaseLayout from "../layouts/BaseLayout.astro";
           Piriápolis · Maldonado · Obras residenciales
         </div>
 
-        <h1>Olimpo Construcciones</h1>
+        <p class="hero-kicker">Construcción y reformas con trato directo</p>
+
+        <h1>Espacios bien construidos, pensados para durar.</h1>
+
         <p class="section-lead">
-          Construcción, reformas y ampliaciones con terminaciones prolijas,
-          comunicación clara y seguimiento cercano.
+          En Olimpo Construcciones realizamos obras residenciales, reformas y
+          ampliaciones con foco en prolijidad, orden y seguimiento cercano en
+          cada etapa del trabajo.
         </p>
 
         <div class="hero-actions">
-          <a class="btn btn-primary" href="#contacto">Contactar</a>
+          <a class="btn btn-primary" href="#contacto">Solicitar presupuesto</a>
           <a class="btn btn-ghost" href="#trabajos">Ver trabajos</a>
         </div>
+
+        <div class="hero-points">
+          <span>Obras residenciales</span>
+          <span>Reformas y ampliaciones</span>
+          <span>Atención directa por WhatsApp</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- BLOQUE DE CONFIANZA -->
+    <section class="trust-strip">
+      <div class="container trust-grid">
+        <article>
+          <strong>Trato directo</strong>
+          <p>Comunicación clara desde el primer contacto hasta la entrega.</p>
+        </article>
+
+        <article>
+          <strong>Orden en cada etapa</strong>
+          <p>Planificación, seguimiento y cuidado de detalles durante la obra.</p>
+        </article>
+
+        <article>
+          <strong>Terminaciones prolijas</strong>
+          <p>Buscamos resultados sólidos, funcionales y bien resueltos.</p>
+        </article>
       </div>
     </section>
 
     <!-- SERVICIOS -->
     <section id="servicios" class="section section-alt">
       <div class="container">
-        <h2 class="section-title">Servicios</h2>
+        <p class="section-eyebrow">Servicios</p>
+        <h2 class="section-title">Soluciones para construir, mejorar y ampliar tu hogar</h2>
         <p class="section-lead">
-          Soluciones prácticas y funcionales, desde obra nueva hasta mantenimiento.
+          Trabajamos en proyectos residenciales con enfoque práctico,
+          funcional y prolijo.
         </p>
 
-        <div class="grid">
-          <article class="card">
+        <div class="grid services-grid">
+          <article class="card service-card">
+            <span class="service-icon">01</span>
             <h3>Construcción de casas</h3>
-            <p>Obra nueva, desde base hasta terminaciones.</p>
+            <p>Obra nueva, desde la base hasta las terminaciones finales.</p>
           </article>
 
-          <article class="card">
+          <article class="card service-card">
+            <span class="service-icon">02</span>
             <h3>Reformas</h3>
-            <p>Cocina, baño, pintura, electricidad y más.</p>
+            <p>Mejoras en cocina, baño, pintura, electricidad y espacios interiores.</p>
           </article>
 
-          <article class="card">
+          <article class="card service-card">
+            <span class="service-icon">03</span>
             <h3>Ampliaciones</h3>
-            <p>Metros nuevos integrados a tu casa actual.</p>
+            <p>Nuevos metros integrados de forma funcional a la vivienda existente.</p>
           </article>
 
-          <article class="card">
+          <article class="card service-card">
+            <span class="service-icon">04</span>
             <h3>Cabañas</h3>
-            <p>Soluciones prácticas y funcionales.</p>
+            <p>Soluciones residenciales compactas, prácticas y bien ejecutadas.</p>
           </article>
 
-          <article class="card">
+          <article class="card service-card">
+            <span class="service-icon">05</span>
             <h3>Obras varias</h3>
-            <p>Muros, cercas, pisos, veredas y arreglos.</p>
+            <p>Muros, cercas, pisos, veredas y mejoras exteriores.</p>
           </article>
 
-          <article class="card">
+          <article class="card service-card">
+            <span class="service-icon">06</span>
             <h3>Mantenimiento</h3>
-            <p>Pequeñas reparaciones y ajustes.</p>
+            <p>Arreglos, reparaciones y ajustes para mantener la vivienda en buen estado.</p>
           </article>
         </div>
       </div>
@@ -73,93 +111,132 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     <!-- TRABAJOS -->
     <section id="trabajos" class="section">
       <div class="container">
-        <h2 class="section-title">Trabajos realizados</h2>
+        <p class="section-eyebrow">Trabajos realizados</p>
+        <h2 class="section-title">Obras reales, procesos reales</h2>
         <p class="section-lead">
-          Algunas obras y procesos. Más trabajos disponibles en redes y por consulta.
+          Una muestra de trabajos realizados en obra nueva, reformas y mejoras
+          residenciales.
         </p>
 
         <div class="works-grid">
           <figure class="work-card">
-            <img src="/works/obra-1.jpg" alt="Trabajo realizado 1" loading="lazy" />
+            <span class="work-tag">Reforma</span>
+            <img src="/works/obra-1.jpg" alt="Reforma realizada por Olimpo Construcciones" loading="lazy" />
           </figure>
+
           <figure class="work-card">
-            <img src="/works/obra-2.jpg" alt="Trabajo realizado 2" loading="lazy" />
+            <span class="work-tag">Obra nueva</span>
+            <img src="/works/obra-2.jpg" alt="Obra nueva realizada por Olimpo Construcciones" loading="lazy" />
           </figure>
+
           <figure class="work-card">
-            <img src="/works/obra-3.jpg" alt="Trabajo realizado 3" loading="lazy" />
+            <span class="work-tag">Ampliación</span>
+            <img src="/works/obra-3.jpg" alt="Ampliación realizada por Olimpo Construcciones" loading="lazy" />
           </figure>
+
           <figure class="work-card">
-            <img src="/works/obra-4.jpg" alt="Trabajo realizado 4" loading="lazy" />
+            <span class="work-tag">Terminaciones</span>
+            <img src="/works/obra-4.jpg" alt="Terminaciones de obra realizadas por Olimpo Construcciones" loading="lazy" />
           </figure>
+
           <figure class="work-card">
-            <img src="/works/obra-5.jpg" alt="Trabajo realizado 5" loading="lazy" />
+            <span class="work-tag">Exterior</span>
+            <img src="/works/obra-5.jpg" alt="Trabajo exterior realizado por Olimpo Construcciones" loading="lazy" />
           </figure>
+
           <figure class="work-card">
-            <img src="/works/obra-6.jpg" alt="Trabajo realizado 6" loading="lazy" />
+            <span class="work-tag">Proceso</span>
+            <img src="/works/obra-6.jpg" alt="Proceso de obra realizado por Olimpo Construcciones" loading="lazy" />
           </figure>
         </div>
       </div>
     </section>
 
-    <!-- EQUIPO -->
+    <!-- FORMA DE TRABAJO -->
     <section id="equipo" class="section section-alt">
       <div class="container">
-        <h2 class="section-title">Equipo</h2>
+        <p class="section-eyebrow">Forma de trabajo</p>
+        <h2 class="section-title">Orden, comunicación y seguimiento durante la obra</h2>
         <p class="section-lead">
-          Trabajo serio, comunicación clara y foco en terminaciones.
+          Buscamos que cada proyecto avance con claridad, buena coordinación y
+          atención a los detalles importantes.
         </p>
 
-        <div class="card">
-          <h3>Coordinación y cumplimiento</h3>
-          <p>
-            Organizamos el trabajo por etapas, cuidando tiempos, materiales y detalles
-            para llegar a un resultado prolijo.
-          </p>
+        <div class="process-grid">
+          <article class="card process-card">
+            <h3>1. Escuchamos tu idea</h3>
+            <p>Conversamos sobre la necesidad, el alcance del trabajo y la mejor forma de resolverlo.</p>
+          </article>
+
+          <article class="card process-card">
+            <h3>2. Organizamos por etapas</h3>
+            <p>Definimos el trabajo con criterio práctico, cuidando tiempos, materiales y ejecución.</p>
+          </article>
+
+          <article class="card process-card">
+            <h3>3. Ejecutamos con prolijidad</h3>
+            <p>Avanzamos priorizando orden, comunicación y un buen resultado final.</p>
+          </article>
         </div>
       </div>
     </section>
 
-    <!-- UBICACIÓN -->
+    <!-- ZONA DE TRABAJO -->
     <section id="ubicacion" class="section">
       <div class="container">
-        <h2 class="section-title">Ubicación</h2>
+        <p class="section-eyebrow">Zona de trabajo</p>
+        <h2 class="section-title">Piriápolis y Maldonado</h2>
         <p class="section-lead">
-          Por ahora trabajamos en Piriápolis y Maldonado. (Luego definimos ubicación/oficina)
+          Trabajamos principalmente en Piriápolis y alrededores, atendiendo obras
+          residenciales y reformas en Maldonado.
         </p>
 
-        <div class="map-placeholder">Zona Piriápolis / Maldonado</div>
+        <div class="location-box">
+          <strong>Zona principal de atención</strong>
+          <p>Piriápolis · Playa Grande · San Francisco · Maldonado</p>
+        </div>
       </div>
     </section>
 
     <!-- CONTACTO -->
     <section id="contacto" class="section section-alt">
       <div class="container">
-        <h2 class="section-title">Contacto</h2>
+        <p class="section-eyebrow">Contacto</p>
+        <h2 class="section-title">Contanos tu idea y te respondemos</h2>
         <p class="section-lead">
-          WhatsApp como canal principal. Teléfono y email como alternativas.
+          Si ya tenés una idea, una referencia o fotos del trabajo, mejor todavía.
+          Podemos orientarte y avanzar por WhatsApp de forma directa.
         </p>
 
-        <div class="contact-actions">
-          <!-- CAMBIAR EL NUMERO DE WHATSAPP POR EL DEL CLIENTE ANTES DE PRODUCCIÓN -->
-          <a
-            class="btn btn-primary"
-            href="https://wa.me/59899523024?text=Hola,%20quiero%20consultar%20por%20una%20obra."
-            target="_blank"
-            rel="noopener"
-          >
-            WhatsApp
-          </a>
-          <a class="btn btn-ghost" href="#">Email</a>
+        <div class="contact-box">
+          <div class="contact-copy">
+            <h3>Canal principal</h3>
+            <p>Atención directa por WhatsApp para consultas, presupuesto y coordinación.</p>
+          </div>
+
+          <div class="contact-actions">
+            <a
+              class="btn btn-primary"
+              href="https://wa.me/59899523024?text=Hola,%20quiero%20consultar%20por%20una%20obra."
+              target="_blank"
+              rel="noopener"
+            >
+              Escribir por WhatsApp
+            </a>
+
+            <a class="btn btn-ghost" href="mailto:correo@olimpo.com.uy">
+              Enviar email
+            </a>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- FOOTER -->
     <footer class="footer">
-      <div class="container">
-        <p>
-          © {new Date().getFullYear()} Olimpo Construcciones — Piriápolis, Maldonado
-        </p>
+      <div class="container footer-inner">
+        <p>© {new Date().getFullYear()} Olimpo Construcciones</p>
+        <p>Piriápolis, Maldonado · Obras residenciales y reformas</p>
       </div>
     </footer>
   </main>
