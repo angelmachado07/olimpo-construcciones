@@ -204,12 +204,14 @@ h3 {
 }
 
 .logo-text {
-  display: none;
-  font-size: 0.92rem;
-  font-weight: 800;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  display: block;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(1.05rem, 5vw, 1.35rem);
+  font-weight: 700;
+  letter-spacing: 0.01em;
   line-height: 1;
+  color: var(--ink);
+  white-space: nowrap;
 }
 
 .menu-toggle {
@@ -294,16 +296,10 @@ h3 {
     height: 62px;
   }
 
-  .logo-text {
-    display: block;
-    font-size: 1.15rem;
-    font-family: "Cormorant Garamond", Georgia, serif;
-    font-weight: 700;
-    letter-spacing: 0.02em;
-    text-transform: none;
-    color: var(--ink);
-    margin-left: 8px;
-  }
+.logo-text {
+  font-size: 1.8rem;
+  margin-left: 8px;
+}
 
   .navbar.is-scrolled .logo-text {
     font-size: 1.05rem;
@@ -542,19 +538,6 @@ h3 {
   align-items: center;
 }
 
-.trust-brand-wrapper {
-  display: flex;
-  justify-content: center;
-  margin-bottom: var(--space-2);
-}
-
-.trust-logo {
-  height: 60px;
-  width: auto;
-  opacity: 0.8;
-  border-radius: 12px;
-}
-
 .trust-grid article {
   background: rgba(255, 255, 255, 0.96);
   border: 1px solid var(--border-soft);
@@ -578,12 +561,7 @@ h3 {
 
 @media (min-width: 768px) {
   .trust-grid {
-    grid-template-columns: 0.8fr repeat(3, 1fr);
-  }
-
-  .trust-brand-wrapper {
-    margin-bottom: 0;
-    justify-content: flex-start;
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
@@ -674,6 +652,31 @@ h3 {
 }
 
 @media (max-width: 767px) {
+  .navbar-inner {
+  min-height: 70px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.logo {
+  gap: 8px;
+  min-width: 0;
+}
+
+.logo-img {
+  height: 46px;
+  flex-shrink: 0;
+}
+
+.logo-text {
+  font-size: 1.15rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.menu-toggle {
+  flex-shrink: 0;
+}
   .work-tag {
     display: none;
   }
