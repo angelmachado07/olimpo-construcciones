@@ -741,6 +741,18 @@ h3 {
 }
 
 /* ========== FOOTER ========== */
+.footer-email {
+  display: inline-block;
+  margin-top: 8px;
+  color: var(--brand-dark);
+  font-weight: 600;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
+
+.footer-email:hover {
+  text-decoration: underline;
+}
 .footer {
   padding: var(--space-5) 0;
   border-top: 1px solid var(--border-soft);
@@ -900,21 +912,32 @@ h3 {
   height: 24px;
 }
 
-.menu-toggle .line {
-  transition: transform 0.3s ease, opacity 0.3s ease;
+.icon-hamburger,
+.icon-close {
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
   transform-origin: center;
 }
 
-.menu-toggle[aria-expanded="true"] .line-1 {
-  transform: translateY(6px) rotate(45deg);
+.icon-hamburger {
+  opacity: 1;
+  transform: scale(1);
 }
 
-.menu-toggle[aria-expanded="true"] .line-2 {
+.icon-close {
   opacity: 0;
+  transform: scale(0.8);
 }
 
-.menu-toggle[aria-expanded="true"] .line-3 {
-  transform: translateY(-6px) rotate(-45deg);
+.menu-toggle[aria-expanded="true"] .icon-hamburger {
+  opacity: 0;
+  transform: scale(0.8);
+}
+
+.menu-toggle[aria-expanded="true"] .icon-close {
+  opacity: 1;
+  transform: scale(1);
 }
 
 /* Animations - Entrance */
