@@ -10,7 +10,7 @@ html {
 }
 
 :root {
-  --container: 1120px;
+  --container: 1320px;
   --pad-x: 16px;
 
   --space-1: 8px;
@@ -47,6 +47,18 @@ html {
   --shadow-lg: 0 24px 70px rgba(15, 23, 42, 0.16);
 
   --nav-h: 78px;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --pad-x: 24px;
+  }
+}
+
+@media (min-width: 1280px) {
+  :root {
+    --pad-x: 32px;
+  }
 }
 
 body {
