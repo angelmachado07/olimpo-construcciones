@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import { works } from "../data/works";
 ---
 
 <BaseLayout
@@ -10,7 +11,6 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     <!-- INICIO / HERO -->
     <section id="inicio" class="hero">
       <div class="container">
-        <!-- <p class="hero-kicker animate-in delay-1">Olimpo Construcciones</p> -->
 
         <h1 class="animate-in delay-1">Espacios bien construidos, pensados para durar.</h1>
 
@@ -52,14 +52,6 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     <!-- BLOQUE DE CONFIANZA -->
     <section class="trust-strip">
       <div class="container trust-grid">
-        <!--div class="trust-brand-wrapper scroll-fade-in delay-1">
-          <img
-            src="/brand/Logo.png"
-            alt="Olimpo Construcciones"
-            class="trust-logo"
-            loading="lazy"
-          />
-        </div-->
 
         <article class="scroll-fade-in">
           <strong>Trato directo</strong>
@@ -259,156 +251,20 @@ import BaseLayout from "../layouts/BaseLayout.astro";
         </p>
 
         <div class="works-grid">
-          <figure class="work-card scroll-fade-in">
-            <span class="work-tag">Steel Framing</span>
-            <img src="/works/obra-1.jpg" alt="Estructura de steel framing sobre plataforma de madera, en etapa inicial de obra" loading="lazy" />
-          </figure>
+  {
+    works.map((work) => (
+      <figure class="work-card scroll-fade-in">
+        <span class="work-tag">{work.tag}</span>
 
-          <figure class="work-card scroll-fade-in">
-            <span class="work-tag">Estructura</span>
-            <img src="/works/obra-2.jpg" alt="Montaje de estructura metálica y perfilería para desarrollo de vivienda residencial" loading="lazy" />
-          </figure>
-
-          <figure class="work-card scroll-fade-in">
-            <span class="work-tag">Avance de obra</span>
-            <img src="/works/obra-3.jpg" alt="Proceso de cerramiento exterior perimetral y colocación de aberturas en la obra" loading="lazy" />
-          </figure>
-
-          <figure class="work-card scroll-fade-in">
-            <span class="work-tag">Exteriores</span>
-            <img src="/works/obra-4.jpg" alt="Fachada exterior finalizada con revestimiento texturado en tonos oscuros y líneas modernas" loading="lazy" />
-          </figure>
-
-          <figure class="work-card scroll-fade-in">
-            <span class="work-tag">Exteriores</span>
-            <img src="/works/obra-5.jpg" alt="Vista exterior lateral con instalación de deck de madera tratada y terminaciones prolijas" loading="lazy" />
-          </figure>
-
-          <figure class="work-card scroll-fade-in">
-            <span class="work-tag">Terminaciones</span>
-            <img src="/works/obra-6.jpg" alt="Detalle arquitectónico de terminaciones en abertura exterior y revestimiento de fachada" loading="lazy" />
-          </figure>
-
-          <figure class="work-card scroll-fade-in">
-            <span class="work-tag">Montaje interior</span>
-            <img src="/works/obra-7.jpg" alt="Espacio de cocina durante el proceso de revestimiento e instalación de mobiliario a medida" loading="lazy" />
-          </figure>
-
-          <figure class="work-card scroll-fade-in">
-            <span class="work-tag">Interior</span>
-            <img src="/works/obra-8.jpg" alt="Ambiente interior luminoso con pisos cerámicos instalados y grandes ventanales de aluminio" loading="lazy" />
-          </figure>
-
-          <figure class="work-card scroll-fade-in">
-            <span class="work-tag">Nivelación</span>
-            <img src="/works/obra-9.jpg" alt="Trabajos de movimiento de suelo y nivelación de terreno con maquinaria pesada previos a la cimentación" loading="lazy" />
-          </figure>
-
-          <figure class="work-card scroll-fade-in">
-            <span class="work-tag">Obra nueva</span>
-            <img src="/works/obra-10.jpg" alt="Levantamiento perimetral en mampostería tradicional para obra nueva en entorno serrano" loading="lazy" />
-          </figure>
-
-          <figure class="work-card scroll-fade-in">
-            <span class="work-tag">Piscinas</span>
-            <img src="/works/obra-11.jpg" alt="Piscina exterior finalizada, destacando borde atérmico y cuidado en el entorno paisajístico" loading="lazy" />
-          </figure>
-
-          <figure class="work-card scroll-fade-in">
-            <span class="work-tag">Piscinas</span>
-            <img src="/works/obra-12.jpg" alt="Vista frontal de piscina residencial con equipamiento completo e integración al jardín" loading="lazy" />
-          </figure>
-
-          <figure class="work-card scroll-fade-in">
-            <span class="work-tag">Piscinas</span>
-            <img src="/works/obra-13.jpg" alt="Integración de piscina exterior al área de ocio de vivienda residencial terminada" loading="lazy" />
-          </figure>
-
-          <figure class="work-card scroll-fade-in">
-            <span class="work-tag">Plateas</span>
-            <img src="/works/obra-14.jpg" alt="Ejecución de platea de hormigón armado con previsión de instalaciones sanitarias" loading="lazy" />
-          </figure>
-
-          <figure class="work-card scroll-fade-in">
-            <span class="work-tag">Cimentación</span>
-            <img src="/works/obra-15.jpg" alt="Vertido y nivelación de losa de cimentación en hormigón para base sólida estructural" loading="lazy" />
-          </figure>
-
-          <figure class="work-card scroll-fade-in">
-            <span class="work-tag">Obra nueva</span>
-            <img src="/works/obra-16.jpg" alt="Proceso continuo de mampostería tradicional con ladrillos de campo y juntas prolijas" loading="lazy" />
-          </figure>
-
-          <figure class="work-card scroll-fade-in">
-            <span class="work-tag">Obra entregada</span>
-            <img src="/works/obra-17.jpg" alt="Vivienda unifamiliar finalizada, resaltando la pureza estructural y diseño de cubierta clara" loading="lazy" />
-          </figure>
-
-          <figure class="work-card scroll-fade-in">
-            <span class="work-tag">Piscinas</span>
-            <img src="/works/obra-18.jpg" alt="Piscina revestida en tonos claros complementada con fuente de agua tipo cascada" loading="lazy" />
-          </figure>
-
-          <figure class="work-card scroll-fade-in">
-            <span class="work-tag">Detalles</span>
-            <img src="/works/obra-19.jpg" alt="Terminación detallada en muro de piedra natural que conforma la cascada de la piscina" loading="lazy" />
-          </figure>
-
-          <figure class="work-card scroll-fade-in">
-            <span class="work-tag">Exterior</span>
-            <img src="/works/obra-20.jpg" alt="Exterior de vivienda" loading="lazy" />
-          </figure>
-
-          <figure class="work-card scroll-fade-in">
-            <span class="work-tag">Exterior</span>
-            <img src="/works/obra-21.jpg" alt="Toma angular de obra terminada, evidenciando volumen, aberturas y calidad de fachada exterior" loading="lazy" />
-          </figure>
-
-          <figure class="work-card scroll-fade-in">
-            <span class="work-tag">Fachada</span>
-            <img src="/works/obra-22.jpg" alt="Fachada principal de vivienda" loading="lazy" />
-          </figure>
-
-          <figure class="work-card scroll-fade-in">
-            <span class="work-tag">Piscina</span>
-            <img src="/works/obra-23.jpg" alt="Escalera de piscina" loading="lazy" />
-          </figure>
-
-          <figure class="work-card scroll-fade-in">
-            <span class="work-tag">Piscina</span>
-            <img src="/works/obra-24.jpg" alt="Piscina pintada en color turquesa" loading="lazy" />
-          </figure>
-
-          <figure class="work-card scroll-fade-in">
-            <span class="work-tag">Terminaciones</span>
-            <img src="/works/obra-25.jpg" alt="Acceso principal resuelto con materiales nobles y acabados impecables para recibir a los residentes" loading="lazy" />
-          </figure>
-
-          <figure class="work-card scroll-fade-in">
-            <span class="work-tag">Baños</span>
-            <img src="/works/obra-26.jpg" alt="Lavamanos moderno" loading="lazy" />
-          </figure>
-
-          <figure class="work-card scroll-fade-in">
-            <span class="work-tag">Detalles</span>
-            <img src="/works/obra-27.jpg" alt="Puerta interior corrediza" loading="lazy" />
-          </figure>
-
-          <figure class="work-card scroll-fade-in">
-            <span class="work-tag">Interiores</span>
-            <img src="/works/obra-28.jpg" alt="Interior de vivienda" loading="lazy" />
-          </figure>
-
-          <figure class="work-card scroll-fade-in">
-            <span class="work-tag">Cocinas</span>
-            <img src="/works/obra-29.jpg" alt="Cocina moderna" loading="lazy" />
-          </figure>
-
-          <figure class="work-card scroll-fade-in">
-            <span class="work-tag">Baños</span>
-            <img src="/works/obra-30.jpg" alt="Mampostería tradicional" loading="lazy" />
-          </figure>
-        </div>
+        <img
+          src={work.src}
+          alt={work.alt}
+          loading="lazy"
+        />
+      </figure>
+    ))
+  }
+</div>
       </div>
     </section>
 
