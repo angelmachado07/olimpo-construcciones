@@ -428,11 +428,18 @@ h3 {
   align-items: center;
   overflow: hidden;
   color: #fff;
+
   background:
-    linear-gradient(90deg, rgba(15, 23, 42, 0.88), rgba(15, 23, 42, 0.62)),
-    url("/hero/hero.jpg");
+    linear-gradient(
+      90deg,
+      rgba(15, 23, 42, 0.72),
+      rgba(15, 23, 42, 0.28)
+    ),
+    url("/hero/cabana-olimpo-construcciones.webp");
+
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
 }
 
 .hero::after {
@@ -440,8 +447,16 @@ h3 {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(900px 520px at 20% 20%, rgba(201, 162, 74, 0.28), transparent 55%),
-    radial-gradient(900px 520px at 80% 30%, rgba(242, 210, 124, 0.14), transparent 55%);
+    radial-gradient(
+      900px 520px at 20% 20%,
+      rgba(201, 162, 74, 0.12),
+      transparent 55%
+    ),
+    radial-gradient(
+      900px 520px at 80% 30%,
+      rgba(242, 210, 124, 0.06),
+      transparent 55%
+    );
   pointer-events: none;
 }
 
@@ -458,7 +473,7 @@ h3 {
 }
 
 .hero .section-lead {
-  color: rgba(255, 255, 255, 0.88);
+  color: rgba(255, 255, 255, 0.92);
   font-size: 1.08rem;
   max-width: 60ch;
 }
@@ -1028,7 +1043,7 @@ h3 {
   position: relative;
   cursor: pointer;
   display: block;
-  border-radius: 0;
+  border-radius: var(--radius);
   overflow: hidden;
   box-shadow: var(--shadow-xs);
   transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
