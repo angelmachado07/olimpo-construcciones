@@ -5,126 +5,103 @@ export interface Work {
 }
 
 export const works: Work[] = [
-  {
-    src: "/works/cabana-estructura-steel-framing-etapa-inicial.webp",
-    tag: "Steel Framing",
-    alt: "Estructura inicial de una cabaña steel framing sobre la base preparada para la obra",
-  },
-  {
-    src: "/works/cabana-steel-framing-vista-frontal-proceso.webp",
-    tag: "Steel Framing",
-    alt: "Vista frontal del proceso constructivo de la cabaña steel framing en avance",
-  },
-  {
-    src: "/works/cabana-steel-framing-membrana-proceso-lago.webp",
-    tag: "Steel Framing",
-    alt: "Cabaña steel framing con membrana instalada y vista hacia el lago durante la obra",
-  },
-  {
-    src: "/works/cabana-revestimiento-negro-con-andamio.webp",
-    tag: "Avance de obra",
-    alt: "Cabaña con revestimiento negro en proceso y andamio aún presente",
-  },
-  {
-    src: "/works/cabana-revestimiento-negro-obra-avanzada.webp",
-    tag: "Avance de obra",
-    alt: "Cabaña con revestimiento negro en etapa avanzada de obra y estructura ya cerrada",
-  },
-  {
-    src: "/works/cabana-revestimiento-negro-deck-atardecer.webp",
-    tag: "Cabañas",
-    alt: "Cabaña con revestimiento negro y deck exterior al atardecer sobre el paisaje",
-  },
-  {
-    src: "/works/cabana-negra-terminada-vista-exterior.webp",
-    tag: "Cabañas",
-    alt: "Cabaña negra terminada vista desde el exterior con líneas limpias y materiales nobles",
-  },
-  {
-    src: "/works/cabana-negra-entre-vegetacion.webp",
-    tag: "Cabañas",
-    alt: "Cabaña negra emplazada entre la vegetación con un impacto paisajístico muy marcado",
-  },
-  {
-    src: "/works/cabana-moderna-fachada-negra-junto-laguna.webp",
-    tag: "Cabañas",
-    alt: "Cabaña moderna de fachada oscura junto a la laguna con gran impacto visual",
-  },
-  {
-    src: "/works/cabana-moderna-fachada-negra-deck-atardecer.webp",
-    tag: "Cabañas",
-    alt: "Fachada negra de cabaña con deck exterior y luces del atardecer",
-  },
-  {
-    src: "/works/cabana-fachada-vidriada-junto-al-lago.webp",
-    tag: "Cabañas",
-    alt: "Cabaña con fachada vidriada y vista directa al lago al fondo",
-  },
-  {
-    src: "/works/cabana-frente-vidriado-junto-al-lago.webp",
-    tag: "Cabañas",
-    alt: "Frente de cabaña vidriado y conectado visualmente con el lago",
-  },
+  // 1) Cabaña negra terminada — exteriores destacados
   {
     src: "/works/cabana-frontal-reflejo-estanque-atardecer.webp",
     tag: "Cabañas",
-    alt: "Frente de cabaña reflejado sobre un estanque al atardecer",
+    alt: "Cabaña terminada iluminada al atardecer con reflejo sobre el estanque",
   },
   {
     src: "/works/cabana-frontal-reflejo-laguna-paisaje.webp",
     tag: "Cabañas",
-    alt: "Frente de cabaña con reflejo sobre la laguna y paisaje abierto al fondo",
-  },
-  {
-    src: "/works/cabana-moderna-fachada-vidriada-atardecer.webp",
-    tag: "Cabañas",
-    alt: "Cabaña moderna con fachadas vidriadas reflejando la luz del atardecer",
-  },
-  {
-    src: "/works/cabana-moderna-reflejo-laguna-atardecer.webp",
-    tag: "Cabañas",
-    alt: "Cabaña moderna reflejada sobre la laguna durante el atardecer",
+    alt: "Vista frontal de la cabaña terminada reflejada en la laguna",
   },
   {
     src: "/works/cabana-sobre-laguna-vista-panoramica.webp",
     tag: "Cabañas",
-    alt: "Cabaña sobre la laguna capturada en una vista panorámica amplia",
+    alt: "Vista panorámica de la cabaña terminada junto a la laguna",
   },
+  {
+    src: "/works/cabana-frente-vidriado-junto-al-lago.webp",
+    tag: "Cabañas",
+    alt: "Frente vidriado de la cabaña terminada junto al lago",
+  },
+  {
+    src: "/works/cabana-fachada-vidriada-junto-al-lago.webp",
+    tag: "Cabañas",
+    alt: "Fachada vidriada de la cabaña con deck junto al lago",
+  },
+  {
+    src: "/works/cabana-moderna-fachada-negra-junto-laguna.webp",
+    tag: "Cabañas",
+    alt: "Fachada negra terminada de una cabaña moderna junto a la laguna",
+  },
+
+  // 2) Cabaña negra terminada — interiores
   {
     src: "/works/interior-cabana-amueblada-con-entrepiso.webp",
     tag: "Interiores",
-    alt: "Interior de cabaña amueblada con entrepiso y una distribución funcional y acogedora",
+    alt: "Interior amueblado de cabaña con entrepiso y terminaciones en madera",
   },
   {
     src: "/works/interior-cabana-madera-loft-cocina.webp",
     tag: "Interiores",
-    alt: "Interior de cabaña con madera, loft y cocina integrada al espacio principal",
+    alt: "Interior de cabaña con loft, cocina integrada y revestimientos de madera",
   },
   {
     src: "/works/interior-cabana-nocturno-con-estufa.webp",
     tag: "Interiores",
-    alt: "Interior de cabaña nocturno con estufa y ambiente íntimo y acogedor",
+    alt: "Interior nocturno de cabaña con estufa y vista hacia la laguna",
   },
   {
     src: "/works/living-cabana-con-vista-al-lago.webp",
     tag: "Interiores",
-    alt: "Living de cabaña con vista amplia al lago y ambiente de descanso bien resuelto",
+    alt: "Living terminado de cabaña con grandes ventanales y vista al lago",
   },
   {
     src: "/works/interior-con-vista-al-lago-y-piso-instalado.webp",
     tag: "Interiores",
-    alt: "Interior con vista al lago y piso instalado en una etapa muy avanzada de terminación",
+    alt: "Interior de la cabaña con piso instalado y vista directa al lago",
+  },
+  {
+    src: "/works/cabana-moderna-fachada-vidriada-atardecer.webp",
+    tag: "Interiores",
+    alt: "Interior iluminado visible desde la fachada vidriada de la cabaña al atardecer",
+  },
+
+  // 3) Cabaña negra — proceso de construcción
+  {
+    src: "/works/cabana-estructura-steel-framing-etapa-inicial.webp",
+    tag: "Steel Framing",
+    alt: "Estructura inicial de steel framing de la cabaña sobre el deck",
+  },
+  {
+    src: "/works/cabana-steel-framing-vista-frontal-proceso.webp",
+    tag: "Steel Framing",
+    alt: "Vista frontal de la estructura de steel framing durante la construcción",
+  },
+  {
+    src: "/works/cabana-steel-framing-membrana-proceso-lago.webp",
+    tag: "Steel Framing",
+    alt: "Cabaña en proceso con membrana exterior instalada junto al lago",
+  },
+  {
+    src: "/works/cabana-revestimiento-negro-con-andamio.webp",
+    tag: "Avance de obra",
+    alt: "Colocación del revestimiento negro de la cabaña con andamio",
+  },
+  {
+    src: "/works/cabana-revestimiento-negro-obra-avanzada.webp",
+    tag: "Avance de obra",
+    alt: "Cabaña con revestimiento negro en una etapa avanzada de obra",
   },
   {
     src: "/works/detalle-ventana-y-revestimiento-negro.webp",
-    tag: "Detalles",
-    alt: "Detalle de ventana y revestimiento negro que resalta la precisión de la terminación",
+    tag: "Avance de obra",
+    alt: "Detalle de ventana y revestimiento negro durante la terminación de la cabaña",
   },
-  {
-    src: "/works/cocina-madera-instalacion-en-proceso.webp",
-    tag: "Cocinas",
-    alt: "Cocina de madera en proceso de instalación con mobiliario y revestimientos parciales",
-  },
+
+  // 4) Desde piscinas en adelante se conserva el orden anterior
   {
     src: "/works/piscina-residencial-con-area-de-trabajo-olimpo.webp",
     tag: "Piscinas",
